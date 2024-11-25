@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="SidePanelColor" Color="#164863"/>
+    <SolidColorBrush x:Key="WindowBgColor" Color="#f6f6f6"/>
+    <SolidColorBrush x:Key="DefaultTextColor" Color="#474747"/>
+    <SolidColorBrush x:Key="RefreshColor" Color="#0cafff"/>
+    <SolidColorBrush x:Key="AddColor" Color="#2ad985"/>
+    <SolidColorBrush x:Key="EditColor" Color="#f4b30c"/>
+    <SolidColorBrush x:Key="DeleteColor" Color="#ca2c2c"/>
+</ResourceDictionary>

@@ -1,0 +1,51 @@
+﻿<reactiveui:ReactiveWindow x:Class="TodoClient.Views.TodoDialogView"
+                           x:TypeArguments="vm:TodoDialogViewModel"
+                           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                           xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                           xmlns:vm="clr-namespace:TodoClient.ViewModels"
+                           xmlns:reactiveui="http://reactiveui.net"
+                           Title="Добавить задачу" Width="380" SizeToContent="Height"
+                           WindowStartupLocation="CenterOwner">
+
+    <Grid Margin="10">
+        <Grid.Resources >
+            <Style TargetType="Border" >
+                <Setter Property="Padding" Value="5" />
+            </Style>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="37"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Column="0">
+            <TextBlock Text="Описание"/>
+        </Border>
+        <Border Grid.Column="1">
+            <TextBox x:Name="TodoContent"/>
+        </Border>
+
+        <Border Grid.Column="0" Grid.Row="1">
+            <TextBlock Text="Дата и время"/>
+        </Border>
+        <Border Grid.Column="1" Grid.Row="1">
+            <DatePicker x:Name="EndDate"></DatePicker>
+        </Border>
+
+        <Border Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"/>
+
+        <Border Grid.Column="0" Grid.Row="3">
+            <Button x:Name="OkButton" HorizontalAlignment="Left" Content="OK" Width="80" IsDefault="True"/>
+        </Border>
+        <Border Grid.Column="1" Grid.Row="3">
+            <Button HorizontalAlignment="Right" Content="Отмена" Width="80" IsCancel="True"/>
+        </Border>
+    </Grid>
+</reactiveui:ReactiveWindow>
